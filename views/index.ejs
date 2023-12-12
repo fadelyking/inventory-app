@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+	<head>
+		<a href="/new">Form</a>
+		<title><%= title %></title>
+		<link rel="stylesheet" href="/stylesheets/style.css" />
+	</head>
+	<body>
+		<h1><%= title %></h1>
+		<div class="message-container">
+			<p><%= messages.map(message => message.user) %></p>
+			<p><%= messages.map(message => message.text) %></p>
+			<p><%= messages.map(message => message.added) %></p>
+		</div>
+	</body>
 </html>
